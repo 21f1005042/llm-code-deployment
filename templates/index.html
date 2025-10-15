@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Code Deployment API</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>LLM Code Deployment</h1>
+            </div>
+            <p class="subtitle">Automated Web Application Generation & Deployment</p>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Transform Ideas into Deployed Applications</h2>
+                    <p>Using AI-powered code generation and automated deployment to GitHub Pages</p>
+                    <div class="status-indicators">
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>API: Operational</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>LLM: Connected</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>GitHub: Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature-card">
+                    <i class="fas fa-code"></i>
+                    <h3>AI Code Generation</h3>
+                    <p>Uses Hugging Face LLMs to generate complete, functional web applications from natural language descriptions</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Auto Deployment</h3>
+                    <p>Automatically creates GitHub repositories and deploys to GitHub Pages with zero manual configuration</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Smart Revisions</h3>
+                    <p>Supports iterative improvements with AI-powered code updates based on feedback and new requirements</p>
+                </div>
+            </section>
+
+            <section class="api-docs">
+                <h2>API Endpoints</h2>
+                <div class="endpoints">
+                    <div class="endpoint-card">
+                        <div class="endpoint-header">
+                            <span class="method post">POST</span>
+                            <code class="endpoint-path">/api/deploy</code>
+                        </div>
+                        <p class="endpoint-description">Initial application deployment request</p>
+                        <div class="endpoint-example">
+                            <pre><code>{
+  "email": "student@example.com",
+  "secret": "your-secret",
+  "task": "unique-task-id",
+  "round": 1,
+  "nonce": "unique-nonce",
+  "brief": "Application description",
+  "checks": ["Requirement 1", "Requirement 2"],
+  "evaluation_url": "https://webhook.site/url",
+  "attachments": []
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="endpoint-card">
+                        <div class="endpoint-header">
+                            <span class="method post">POST</span>
+                            <code class="endpoint-path">/api/revise</code>
+                        </div>
+                        <p class="endpoint-description">Application revision and update request</p>
+                        <div class="endpoint-example">
+                            <pre><code>{
+  "email": "student@example.com",
+  "secret": "your-secret",
+  "task": "unique-task-id",
+  "round": 2,
+  "nonce": "unique-nonce",
+  "brief": "Update requirements",
+  "checks": ["New requirement 1", "New requirement 2"],
+  "evaluation_url": "https://webhook.site/url",
+  "attachments": []
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="endpoint-card">
+                        <div class="endpoint-header">
+                            <span class="method get">GET</span>
+                            <code class="endpoint-path">/api/status/{task_id}</code>
+                        </div>
+                        <p class="endpoint-description">Check deployment status</p>
+                    </div>
+
+                    <div class="endpoint-card">
+                        <div class="endpoint-header">
+                            <span class="method get">GET</span>
+                            <code class="endpoint-path">/health</code>
+                        </div>
+                        <p class="endpoint-description">Health check and system status</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quick-start">
+                <h2>Quick Start</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Submit Deployment Request</h3>
+                            <p>Send a POST request to <code>/api/deploy</code> with your application requirements</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>AI Generates Code</h3>
+                            <p>Our LLM analyzes your brief and generates complete, deployable code</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Auto-Deploy to GitHub</h3>
+                            <p>Code is automatically pushed to a new GitHub repository and deployed to Pages</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Receive Updates</h3>
+                            <p>Get revision requests and update your application with <code>/api/revise</code></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LLM Code Deployment</h4>
+                    <p>Automating web development with AI</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Technology Stack</h4>
+                    <ul>
+                        <li>FastAPI</li>
+                        <li>Hugging Face Transformers</li>
+                        <li>GitHub API</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LLM Code Deployment. MIT License.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

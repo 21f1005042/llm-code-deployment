@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  llm-deployment-app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - SECRET_KEY=${SECRET_KEY}
+      - EVALUATION_BASE_URL=${EVALUATION_BASE_URL}
+    volumes:
+      - ./app:/app
+    restart: unless-stopped
+
+  # Optional: Add Redis for task queue
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    restart: unless-stopped 
